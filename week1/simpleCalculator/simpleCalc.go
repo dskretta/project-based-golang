@@ -20,23 +20,23 @@ func main() {
 	var secondNum float64
 	fmt.Scanln(&secondNum)
 
-	// 4. Find out the operator
-	if operator == "+" {
+	switch operator {
+	case "+":
 		fmt.Println(firstNum+secondNum, "is the answer")
-	} else if operator == "-" {
+
+	case "-":
 		fmt.Println(firstNum-secondNum, "is the answer")
-	} else if operator == "*" {
+
+	case "*":
 		fmt.Println(firstNum*secondNum, "is the answer")
-	} else if operator == "/" {
-		// 5. Check if secondNum is 0 to avoid a crash
+
+	case "/":
 		if secondNum == 0 {
 			fmt.Println("Error: Cannot divide by zero.")
 		} else {
-			// If it's not 0, it's safe to divide
 			fmt.Println(firstNum/secondNum, "is the answer")
 		}
-	} else {
-		// 6. Add a final "else" to catch bad input
+	default:
 		fmt.Println("Error: Invalid operator.")
 	}
 }
