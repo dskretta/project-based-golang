@@ -44,5 +44,5 @@ func main() {
 		}
 	}
 	// 8 After the loop ends, print the final result
-	fmt.Println(keyword, "occures in the file", occurrences, "times!")
+	fmt.Println(keyword, "occurs in the file", occurrences, "times!")
 }
